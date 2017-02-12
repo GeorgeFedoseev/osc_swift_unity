@@ -12,6 +12,9 @@
 		5E2C38D41E50403C00FB418B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2C38D21E50403C00FB418B /* Main.storyboard */; };
 		5E2C38D61E50403C00FB418B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2C38D51E50403C00FB418B /* Assets.xcassets */; };
 		5E2C38D91E50403C00FB418B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2C38D71E50403C00FB418B /* LaunchScreen.storyboard */; };
+		5E3A44021E50597D007754D9 /* texture_gradient.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E3A44011E50597D007754D9 /* texture_gradient.jpg */; };
+		5E3A44061E506BEC007754D9 /* UDP in Resources */ = {isa = PBXBuildFile; fileRef = 5E3A44051E506BEC007754D9 /* UDP */; };
+		5E3A440A1E506C5D007754D9 /* OSC in Resources */ = {isa = PBXBuildFile; fileRef = 5E3A44091E506C5D007754D9 /* OSC */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		5E2C38D51E50403C00FB418B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E2C38D81E50403C00FB418B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E2C38DA1E50403C00FB418B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E3A44011E50597D007754D9 /* texture_gradient.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture_gradient.jpg; sourceTree = "<group>"; };
+		5E3A44051E506BEC007754D9 /* UDP */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UDP; sourceTree = "<group>"; };
+		5E3A44091E506C5D007754D9 /* OSC */ = {isa = PBXFileReference; lastKnownFileType = folder; path = OSC; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 		5E2C38CD1E50403B00FB418B /* OSC_swift */ = {
 			isa = PBXGroup;
 			children = (
+				5E3A44011E50597D007754D9 /* texture_gradient.jpg */,
+				5E3A44091E506C5D007754D9 /* OSC */,
+				5E3A44051E506BEC007754D9 /* UDP */,
 				5E2C38CE1E50403B00FB418B /* AppDelegate.swift */,
 				5E2C38D01E50403C00FB418B /* ViewController.swift */,
 				5E2C38D21E50403C00FB418B /* Main.storyboard */,
@@ -124,7 +133,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3A440A1E506C5D007754D9 /* OSC in Resources */,
+				5E3A44061E506BEC007754D9 /* UDP in Resources */,
 				5E2C38D91E50403C00FB418B /* LaunchScreen.storyboard in Resources */,
+				5E3A44021E50597D007754D9 /* texture_gradient.jpg in Resources */,
 				5E2C38D61E50403C00FB418B /* Assets.xcassets in Resources */,
 				5E2C38D41E50403C00FB418B /* Main.storyboard in Resources */,
 			);
@@ -263,10 +275,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CE8FVT4JP6;
 				INFOPLIST_FILE = OSC_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.george.OSC-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -276,10 +290,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = CE8FVT4JP6;
 				INFOPLIST_FILE = OSC_swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.george.OSC-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -302,6 +318,7 @@
 				5E2C38DF1E50403D00FB418B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
