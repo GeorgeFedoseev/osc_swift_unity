@@ -233,15 +233,21 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     
     
     func OnPan(g:UIPanGestureRecognizer){
-        
         let translation = g.translation(in: trackpadView)
+        
+        
+        if g.state == .began {
+            lastPoint = translation            
+        }
+        
+        
         
         
         let delta = CGPoint(x: translation.x - lastPoint.x, y: translation.y - lastPoint.y)
         
         print("pan \(delta.x) \(delta.y)")
         
-        SendRotation(rotY: Float(delta.y))
+        SendRotation(rotY: Float(delta.x))
         
         lastPoint = translation;
         
