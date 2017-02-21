@@ -122,13 +122,13 @@ class Osc {
             }
             let obj = unsafeBitCast(info, to: Osc.self)
             obj.GetAddress(host: host)
-            CFHostUnscheduleFromRunLoop(host, CFRunLoopGetCurrent(), CFRunLoopMode.defaultMode as! CFString)
+            CFHostUnscheduleFromRunLoop(host, CFRunLoopGetCurrent(), CFRunLoopMode.defaultMode.rawValue)
             obj.callback_()
             
             
         }, &ctx)
         
-        CFHostScheduleWithRunLoop(host, CFRunLoopGetCurrent(), CFRunLoopMode.defaultMode as! CFString)
+        CFHostScheduleWithRunLoop(host, CFRunLoopGetCurrent(), CFRunLoopMode.defaultMode.rawValue)
         CFHostStartInfoResolution(host, CFHostInfoType.addresses, nil)
     }
     
@@ -167,7 +167,7 @@ class Osc {
         // IPv6
         for i in 0 ..< CFArrayGetCount(address_list_) {
             let data = unsafeBitCast(CFArrayGetValueAtIndex(address_list_, i), to: CFData.self)
-            CFDataGetBytePtr(data).withMemoryRebound(to: sockaddr_in.self, capacity: 1, { address6 in
+            CFDataGetBytePtr(data).withMemoryRebound(to: sockaddr_in6.self, capacity: 1, { address6 in
                 addr6_ = unsafeBitCast(address6.pointee, to: sockaddr_in6.self)
                 if addr6_.sin6_family == sa_family_t(AF_INET6) {
                     // IPv6

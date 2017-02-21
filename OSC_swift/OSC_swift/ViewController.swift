@@ -65,6 +65,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
         SaveCurrentSettings()
         
+        TryConnect(completion: {})
+        
         
     }
     
@@ -72,7 +74,14 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func OnSetHostAndPort(_ sender: Any) {
         SetHost(completion: {
             self.SetPort(completion: {
-                self.SetOscAddress(completion: nil)
+                self.SetOscAddress(completion: {
+                    
+                    self.SaveCurrentSettings()
+                    
+                    self.TryConnect(completion: {
+                        print("Connected!")
+                    })
+                })
             })
         })
         
@@ -100,7 +109,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                                         let theTextFields = textFields as [UITextField]
                                         let enteredText = theTextFields[0].text
                                         self?.host = enteredText
-                                        self?.SaveCurrentSettings()
+                                        
                                         
                                         completion?()
                                     }
@@ -136,7 +145,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                                         let theTextFields = textFields as [UITextField]
                                         let enteredText = theTextFields[0].text
                                         self?.port = Int(enteredText!)
-                                        self?.SaveCurrentSettings()
+                                        
                                         completion?()
                                     }
         })
@@ -168,7 +177,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
                                         let theTextFields = textFields as [UITextField]
                                         let enteredText = theTextFields[0].text
                                         self?.oscAddress = enteredText
-                                        self?.SaveCurrentSettings()
+                                       
                                         completion?()
                                     }
         })
@@ -189,7 +198,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         UserDefaults.standard.set(self.oscAddress!, forKey: "oscAddress")
     }
     
-    func TryConnect(completion: (_ error: Bool) -> Void){
+    func TryConnect(completion: @escaping () -> Void){
+        
+        print("Try connect")
+        
         osc = Osc()
         
         
@@ -199,7 +211,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
             self.osc?.SetPort(port: Int(self.port!))
             
             self.statusLabel.text = "Connected"
-            
+            completion()
             
         }
     }
