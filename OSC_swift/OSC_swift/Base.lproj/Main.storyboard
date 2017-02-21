@@ -30,66 +30,44 @@
                                 <color key="textColor" red="0.93805666979170088" green="1" blue="0.97243552146589884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="IP:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="s2M-ac-Q1a">
-                                <rect key="frame" x="88" y="250" width="153" height="108"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqh-Xc-vOg">
+                                <rect key="frame" x="88" y="221" width="167" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="108" id="vzd-rM-IXt"/>
+                                    <constraint firstAttribute="width" constant="167" id="Hdu-mX-Egb"/>
+                                    <constraint firstAttribute="height" constant="21" id="p9T-Zf-7Xf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="80"/>
-                                <color key="textColor" red="0.93805666980000002" green="1" blue="0.97243552150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PORT:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="AT1-pP-9RA">
-                                <rect key="frame" x="88" y="412" width="257" height="108"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="80"/>
-                                <color key="textColor" red="0.93805666980000002" green="1" blue="0.97243552150000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="80" translatesAutoresizingMaskIntoConstraints="NO" id="Tfb-BA-xXo">
-                                <rect key="frame" x="231" y="250.5" width="473" height="108"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="80"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="80" translatesAutoresizingMaskIntoConstraints="NO" id="NRr-wL-kf1">
-                                <rect key="frame" x="364" y="414" width="369" height="108"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ua3-QO-HHa">
+                                <rect key="frame" x="450" y="217" width="220" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="369" id="3be-tF-ro5"/>
+                                    <constraint firstAttribute="width" constant="220" id="24r-ho-Zbc"/>
+                                    <constraint firstAttribute="height" constant="30" id="Afj-6g-0p6"/>
                                 </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="80"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="texture_gradient.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3EF-YK-wqi">
-                                <rect key="frame" x="88" y="590" width="645" height="388"/>
-                            </imageView>
+                                <state key="normal" title="Set Host, Port and OSC address">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OnSetHostAndPort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRu-Kn-XJv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.72905549563983074" green="0.28434467814872866" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="K3A-XB-gZ7" secondAttribute="trailing" constant="68" id="4Pl-zC-EeG"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3EF-YK-wqi" secondAttribute="bottom" constant="46" id="5Cq-j1-OMM"/>
-                            <constraint firstItem="3EF-YK-wqi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="68" id="5L2-Tk-FWD"/>
-                            <constraint firstItem="Tfb-BA-xXo" firstAttribute="height" secondItem="s2M-ac-Q1a" secondAttribute="height" id="EVb-Of-KQT"/>
-                            <constraint firstItem="3EF-YK-wqi" firstAttribute="top" secondItem="AT1-pP-9RA" secondAttribute="bottom" constant="70" id="EvG-oy-yLb"/>
-                            <constraint firstItem="AT1-pP-9RA" firstAttribute="height" secondItem="s2M-ac-Q1a" secondAttribute="height" id="Fh8-th-mfZ"/>
-                            <constraint firstItem="Tfb-BA-xXo" firstAttribute="centerY" secondItem="s2M-ac-Q1a" secondAttribute="centerY" id="Fwy-sp-G3C"/>
-                            <constraint firstItem="NRr-wL-kf1" firstAttribute="leading" secondItem="AT1-pP-9RA" secondAttribute="trailing" constant="19" id="HqK-xj-2rP"/>
-                            <constraint firstItem="s2M-ac-Q1a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="68" id="Mvc-TX-Obd"/>
-                            <constraint firstItem="s2M-ac-Q1a" firstAttribute="top" secondItem="K3A-XB-gZ7" secondAttribute="bottom" constant="8" id="Zix-5m-hix"/>
-                            <constraint firstItem="Tfb-BA-xXo" firstAttribute="leading" secondItem="s2M-ac-Q1a" secondAttribute="trailing" constant="33" id="bd1-8e-bJH"/>
-                            <constraint firstItem="AT1-pP-9RA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="68" id="dcO-kE-2cD"/>
-                            <constraint firstItem="AT1-pP-9RA" firstAttribute="top" secondItem="s2M-ac-Q1a" secondAttribute="bottom" constant="54" id="hdz-JY-A5T"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Tfb-BA-xXo" secondAttribute="trailing" constant="44" id="kin-tX-dmL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3EF-YK-wqi" secondAttribute="trailing" constant="15" id="qhj-79-OMx"/>
+                            <constraint firstItem="cqh-Xc-vOg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="68" id="InE-RD-WBV"/>
+                            <constraint firstItem="cqh-Xc-vOg" firstAttribute="top" secondItem="K3A-XB-gZ7" secondAttribute="bottom" constant="-21" id="Kvy-ro-CBQ"/>
+                            <constraint firstItem="ua3-QO-HHa" firstAttribute="top" secondItem="K3A-XB-gZ7" secondAttribute="bottom" constant="-25" id="db8-zY-MFZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ua3-QO-HHa" secondAttribute="trailing" constant="78" id="gei-w5-LRI"/>
                             <constraint firstItem="K3A-XB-gZ7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="68" id="r5C-RS-DmP"/>
-                            <constraint firstItem="NRr-wL-kf1" firstAttribute="centerY" secondItem="AT1-pP-9RA" secondAttribute="centerY" constant="2" id="tKc-ok-Rqu"/>
                             <constraint firstItem="K3A-XB-gZ7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="wrL-mV-BFd"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="trackpadView" destination="3EF-YK-wqi" id="Tyc-MA-Wwn"/>
+                        <outlet property="statusLabel" destination="cqh-Xc-vOg" id="CCR-ag-Roo"/>
+                        <outlet property="trackpadView" destination="8bC-Xf-vdC" id="OCc-jv-Afh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,7 +75,4 @@
             <point key="canvasLocation" x="135.9375" y="136.5234375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="texture_gradient.jpg" width="1920" height="1200"/>
-    </resources>
 </document>
