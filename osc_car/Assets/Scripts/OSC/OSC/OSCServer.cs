@@ -26,23 +26,24 @@ using System.Collections.Generic;
 
 namespace UnityOSC
 {
-    public delegate void PacketReceivedEventHandler(OSCServer sender, OSCPacket packet);
+    public delegate void PacketReceivedEventHandler(OSCServer sender, OSCPacket packet);    
+           
 
-	/// <summary>
-	/// Receives incoming OSC messages
-	/// </summary>
-	public class OSCServer
+    /// <summary>
+    /// Receives incoming OSC messages
+    /// </summary>
+    public class OSCServer
     {
         #region Delegates
-        public event PacketReceivedEventHandler PacketReceivedEvent;
+        public event PacketReceivedEventHandler PacketReceivedEvent;        
         #endregion
 
         #region Constructors
         public OSCServer (int localPort)
 		{
-            PacketReceivedEvent += delegate(OSCServer s, OSCPacket p) { };
+            PacketReceivedEvent += delegate(OSCServer s, OSCPacket p) { };            
 
-			_localPort = localPort;
+            _localPort = localPort;
 			Connect();
 		}
 		#endregion
@@ -117,6 +118,7 @@ namespace UnityOSC
 			try
 			{
 				_udpClient = new UdpClient(_localPort);
+                
 				_receiverThread = new Thread(new ThreadStart(this.ReceivePool));
 				_receiverThread.Start();
 			}
